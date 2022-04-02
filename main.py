@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from core.config import settings
 from core.db.session import engine
-from core.db.base_class import Base
+from core.db.base import Base
 
 
 #https://docs.sqlalchemy.org/en/14/core/metadata.html?highlight=create_all#sqlalchemy.schema.MetaData.create_all

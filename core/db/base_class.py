@@ -15,10 +15,12 @@ fácilmente en diferentes asignaciones. El siguiente ejemplo ilustra ambos:
 """
 Esta función hace uso del registry.as_declarative_base() método, primero creando registryautomáticamente y luego invocando al decorador.
 """
+
 @as_declarative()
 class Base:
     id : Any
     __name__: str
+    @declared_attr
     def __tablename__(cls)->str:
         return cls.__name__.lower()
 
